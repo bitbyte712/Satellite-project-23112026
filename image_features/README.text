@@ -1,1 +1,2 @@
-
+Large image feature files (e.g., ResNet50 embeddings) are excluded due to file size limits.
+They can be regenerated using the feature extraction code provided in this repository.
