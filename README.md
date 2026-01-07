@@ -202,23 +202,22 @@ This project demonstrates that satellite imagery is most effective when used as 
 
 ## Pipeline Overview
 
-Tabular Features
-      │
-      ▼
-XGBoost (Base Price Model)
-      │
-      ├───────────────┐
-      ▼               │
-Residuals             │
-      ▲               │
-      │               ▼
-Satellite Image → CNN (ResNet50)
-                    │
-                    ▼
-               PCA + Visual Signals
-                    │
-                    ▼
-         XGBoost (Residual Model)
 
-Final Price = Base Price + Visual Correction
+Tabular Features
+↓
+XGBoost (Base Price Model)
+↓
+Base Price
+
+Satellite Images
+↓
+CNN (ResNet50)
+↓
+PCA + Visual Signals
+↓
+XGBoost (Residual Model)
+↓
+Residual Correction
+
+Final Price = Base Price + Residual Correction
 
