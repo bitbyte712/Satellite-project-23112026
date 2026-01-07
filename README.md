@@ -159,30 +159,6 @@ The modest improvement confirms that satellite imagery contributes **complementa
 - Residual logic preserved
 - Final predictions saved as `submission.csv`
 
----
-
-## Project Structure
-
-Satellite-project-23112026/
-│
-├── README.md
-├── data_fetcher.py
-├── preprocessing.ipynb
-├── model_training.ipynb
-├── inference.ipynb
-│
-├── models/
-│ ├── tabular_xgb_fe.pkl
-│ ├── image_residual_xgb_fe.pkl
-│ └── image_pca.joblib
-│
-├── image_features/
-│ ├── resnet50_features.npy
-│ ├── resnet50_pca64.npy
-│ ├── interpretable_features.npy
-│ └── X_image_test.npy
-│
-└── submission.csv
 
 
 (Note: Large binary files may be excluded due to GitHub size limits.)
@@ -199,25 +175,4 @@ Satellite-project-23112026/
 ## Conclusion
 This project demonstrates that satellite imagery is most effective when used as a **corrective signal** rather than a primary predictor in property valuation. The residual multimodal framework improves robustness, interpretability, and realism of predictions.
 
-
-## Pipeline Overview
-
-
-Tabular Features
-↓
-XGBoost (Base Price Model)
-↓
-Base Price
-
-Satellite Images
-↓
-CNN (ResNet50)
-↓
-PCA + Visual Signals
-↓
-XGBoost (Residual Model)
-↓
-Residual Correction
-
-Final Price = Base Price + Residual Correction
 
